@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ticket System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="loginScreen">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name">
+            <input type="text" id="docNumber" placeholder="Document Number" required>
+            <button type="submit">Enter</button>
+        </form>
+    </div>
+
+    <div class="container hidden" id="pinScreen">
+        <h1>Enter PIN</h1>
+        <form id="pinForm">
+            <input type="password" id="pin" placeholder="PIN" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="container hidden" id="dashboard">
+        <div class="header">
+            <h1>Ticket Inbox</h1>
+            <button id="logoutBtn">Logout</button>
+        </div>
+        <div id="ticketsList"></div>
+        <button id="newTicketBtn">New Ticket</button>
+    </div>
+
+    <div class="modal hidden" id="ticketModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>New Ticket</h2>
+            <textarea id="ticketMessage" placeholder="Describe your issue..."></textarea>
+            <button id="submitTicketBtn">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
